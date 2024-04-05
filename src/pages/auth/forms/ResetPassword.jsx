@@ -78,7 +78,7 @@ const ResetPassword = () => {
   return (
     <div
       className="mx-auto p-5 mt-5 rounded-3 reset-bg"
-      style={{ width: "700px", backgroundColor: "#D6DCF0" }}
+      style={{ width: "700px", backgroundColor: "#FFFFFF" }}
     >
       <h1 className="text-center mb-4 text-dark">Reset Password</h1>
       <form

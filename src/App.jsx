@@ -13,7 +13,7 @@ import ResetPassword from "./pages/auth/forms/ResetPassword.jsx";
 import ForgotPassword from "./pages/auth/forms/ForgotPassword.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
+// import "./App.css";
 
 function App() {
   return (

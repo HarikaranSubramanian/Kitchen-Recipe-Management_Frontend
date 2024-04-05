@@ -44,7 +44,7 @@ const ForgotPassword = () => {
   return (
     <div
       className="mx-auto p-5 mt-5 rounded-3"
-      style={{ width: "700px", backgroundColor: "#D6DCF0" }}
+      style={{ width: "700px", backgroundColor: "#FFFFFF" }}
     >
       <h1 className="text-center mb-4 text-dark">Forgot Password</h1>
       <form
@@ -89,7 +89,7 @@ const ForgotPassword = () => {
               to="/auth/login"
               className="link link-primary text-decoration-underline "
             >
-             <small>Login</small>
+              <small>Login</small>
             </Link>
           </span>
         </div>

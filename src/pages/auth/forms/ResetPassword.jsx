@@ -76,49 +76,58 @@ const ResetPassword = () => {
   });
 
   return (
-    <div
-      className="mx-auto p-5 mt-5 rounded-3 reset-bg"
-      style={{ width: "700px", backgroundColor: "#FFFFFF" }}
-    >
-      <h1 className="text-center mb-4 text-dark">Reset Password</h1>
-      <form
-        className="p-5  w-100 mx-auto rounded-3"
-        onSubmit={formik.handleSubmit}
-      >
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">
-            <small>Enter New Password</small>
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            placeholder="Enter New password"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-          />
-          <span className="text-danger">{formik.errors.password}</span>
+    <div className="container-fluid">
+      <div className="row justify-content-center mt-5">
+        <div className="col-lg-12 col-md-8 col-sm-10">
+          <div
+            style={{
+              maxWidth: "700px",
+              backgroundColor: "#FFFFFF",
+              margin: "auto",
+            }}
+            className="p-5 rounded-3 reset-bg"
+          >
+            <h1 className="text-center mb-4 text-dark">Reset Password</h1>
+            <form className="p-4" onSubmit={formik.handleSubmit}>
+              <div className="mb-3">
+                <label htmlFor="password" className="form-label">
+                  <small>Enter New Password</small>
+                </label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  placeholder="Enter New password"
+                  value={formik.values.password}
+                  onChange={formik.handleChange}
+                />
+                <span className="text-danger">{formik.errors.password}</span>
+              </div>
+              <div className="mb-3">
+                <label htmlFor="confirmPassword" className="form-label">
+                  <small>Confirm Password</small>
+                </label>
+                <input
+                  type="password"
+                  className="form-control"
+                  id="confirmPassword"
+                  placeholder="Confirm password"
+                  value={formik.values.confirmPassword}
+                  onChange={formik.handleChange}
+                />
+                <span className="text-danger">
+                  {formik.errors.confirmPassword}
+                </span>
+              </div>
+              <div className="d-grid mt-4">
+                <button type="submit" className="btn btn-warning">
+                  <small>Set Password</small>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div className="mb-3">
-          <label htmlFor="confirmPassword" className="form-label">
-            <small> Confirm Password</small>
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="confirmPassword"
-            placeholder="Confirm password"
-            value={formik.values.confirmPassword}
-            onChange={formik.handleChange}
-          />
-          <span className="text-danger">{formik.errors.confirmPassword}</span>
-        </div>
-        <div className="d-grid mt-4">
-          <button type="submit" className="btn btn-warning ">
-            <small>Set Password</small>
-          </button>
-        </div>
-      </form>
+      </div>
     </div>
   );
 };

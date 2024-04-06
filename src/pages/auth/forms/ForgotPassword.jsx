@@ -42,58 +42,57 @@ const ForgotPassword = () => {
   });
 
   return (
-    <div
-      className="mx-auto p-5 mt-5 rounded-3"
-      style={{ width: "700px", backgroundColor: "#FFFFFF" }}
-    >
-      <h1 className="text-center mb-4 text-dark">Forgot Password</h1>
-      <form
-        className="p-5  w-100 mx-auto rounded-3"
-        onSubmit={formik.handleSubmit}
-      >
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            placeholder="Enter your email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-          />
-          <span className="text-danger">{formik.errors.email}</span>
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-12 col-md-8 col-sm-10">
+          <div class="bg-white rounded-3 p-4">
+            <h1 class="text-center mb-4 text-dark">Forgot Password</h1>
+            <form onSubmit={formik.handleSubmit}>
+              <div class="mb-3">
+                <label for="email" class="form-label">
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                />
+                <span class="text-danger">{formik.errors.email}</span>
+              </div>
+              <div class="d-grid mt-4">
+                <button id="sendEmailBtn" type="submit" class="btn btn-warning">
+                  <small>Send Email</small>
+                </button>
+              </div>
+            </form>
+            <div class="mt-3">
+              <span>
+                <small>You don't have an account?</small>
+              </span>
+              <Link
+                class="link-primary text-decoration-underline"
+                to="/auth/register"
+              >
+                <small>Register</small>
+              </Link>
+            </div>
+            <div class="mt-3">
+              <span class="text-muted">
+                <small>Already have an account?</small>
+                <Link
+                  to="/auth/login"
+                  class="link link-primary text-decoration-underline"
+                >
+                  <small>Login</small>
+                </Link>
+              </span>
+            </div>
+          </div>
         </div>
-        <div className="d-grid mt-4">
-          <button id="sendEmailBtn" type="submit" className="btn btn-warning">
-            <small>Send Email</small>
-          </button>
-        </div>
-        <div className="mt-3">
-          <span>
-            <small>You dont have an account ? </small>{" "}
-          </span>
-
-          <Link
-            className="link-primary text-decoration-underline"
-            to="/auth/register"
-          >
-            <small>Register </small>
-          </Link>
-        </div>
-        <div className="mt-3">
-          <span className="text-muted">
-            <small>Already have an account ? </small>
-            <Link
-              to="/auth/login"
-              className="link link-primary text-decoration-underline "
-            >
-              <small>Login</small>
-            </Link>
-          </span>
-        </div>
-      </form>
+      </div>
     </div>
   );
 };

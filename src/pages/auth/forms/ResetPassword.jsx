@@ -22,7 +22,7 @@ const ResetPassword = () => {
   async function validateToken() {
     try {
         let res = await axios.get(
-          `${API_BASE_URL}/api/v1/users/login/list-all-users`
+          `${API_BASE_URL}/api/v1/users/list-all-users`
           
         );
        
